@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+/* ヘッダー */
+header {
+  background-color: #ec715f;
+  height: 70px;
+}
+.icon {
+  height: 70px;
+}
+nav {
+  float: right;
+}
+.nav-list {
+  height: 70px;
+  align-items: center;
+}
+.nav-item {
+  margin: 0 30px;
+}
+.nav-item a {
+  color: #fafafa;
+  font-size: 1.6rem;
+}
+/* メイン */
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+.heading {
+  font-size: 3.2rem;
+  text-align: center;
+  padding-top: 90px;
+}
+.heading::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #ec715f;
+  margin: 8px auto 0;
+}
+.heading-text {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 30px 0;
+}
+/* メインビジュアル */
+#mv {
+  background-image: url(../img\ 2/mv.png);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  text-align: center;
+  padding-top: 200px;
+}
+.mv-title {
+  font-size: 6.4rem;
+  color: #fafafa;
+  margin-bottom: 10px;
+}
+.mv-text {
+  font-size: 2rem;
+  color: #fafafa;
+}
+/* Portfolio */
+#portfolio,
+#profile {
+  background: #eceff1;
+}
+.work-list {
+  width: 920px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.work-item {
+  width: 300px;
+  height: 250px;
+  margin-top: 10px;
+  background-size: cover;
+  background-position: center;
+}
+.work-item:nth-child(-n + 3) {
+  margin-top: 0;
+}
+.bg-1 {
+  background-image: url(../img\ 2/sketch.jpg);
+}
+.bg-2 {
+  background-image: url(../img\ 2/websuku.png);
+}
+.bg-3 {
+  background-image: url(../img\ 2/write.jpg);
+}
+.bg-4 {
+  background-image: url(../img\ 2/webcamp.png);
+}
+.bg-5 {
+  background-image: url(../img\ 2/talk.jpg);
+}
+.bg-6 {
+  background-image: url(../img\ 2/webcamp-mother.png);
+}
+/* Feature */
+.strength-list {
+  width: 980px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+  display: flex;
+}
+.strength-item {
+  width: 320px;
+  margin-right: 10px;
+  text-align: center;
+}
+.strength-title {
+  font-size: 2rem;
+  padding: 10px 0;
+}
+.strength-text {
+  font-size: 1.6rem;
+  text-align: left;
+}
+/* Profile */
+.profile {
+  width: 1024px;
+  display: flex;
+  padding-bottom: 90px;
+}
+.profile .left-content,
+.profile .right-content {
+  width: 512px;
+}
+.profile .left-content {
+  text-align: center;
+}
+.left-content img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.profile-title,
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.profile-text,
+.contact-text {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+/* Contact */
+.contact {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  padding-bottom: 90px;
+}
+.mail-tel, .sns {
+  width: 400px;
+}
+.sns i {
+  margin-right: 20px;
+}
+/* フッター */
+footer {
+  height: 60px;
+  width: 100%;
+  background: #ec715f;
+  text-align: center;
+}
+.copyright {
+  font-size: 1.6rem;
+  color: #fafafa;
+  line-height: 60px;
+}
+
+.fa-bars {
+  display: none;
+}
+/* スモールウィンドウ */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  /* ヘッダー */
+  header, .icon {
+    height: 50px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .fa-bars {
+    display: block;
+    padding: 8px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 5px 0;
+  }
+  /* メインビジュアル */
+  #mv {
+    background-image: url(../img\ 2/code.png);
+    width: 100%;
+    height: 650px;
+  }
+  .mv-title {
+    font-size: 4rem;
+  }
+  .mv-text {
+    font-size: 1.8rem;
+  }
+  /* portfolio */
+  .work-list, .strength-list, .profile, .contact {
+    flex-direction: column;
+    width: 100%;
+  }
+  .work-item, .strength-item, .mail-tel, .sns {
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+  .work-item:nth-child(odd) {
+    display: none;
+  }
+  /* profile */
+  .sns i {
+    margin: 0 8px;
+  }
+}
